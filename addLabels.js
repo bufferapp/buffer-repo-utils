@@ -9,20 +9,20 @@ github.authenticate({
 });
 
 const LABELS = [
-  { name: 'P1', color: 'e11d21' },
-  { name: 'P2', color: 'eb6420' },
-  { name: 'P3', color: 'fbca04' },
-  { name: 'P4', color: '009800' },
-  { name: 'S1', color: 'e11d21' },
-  { name: 'S2', color: 'eb6420' },
-  { name: 'S3', color: 'fbca04' },
-  { name: 'S4', color: '009800' },
-  { name: 'CR1', color: 'e11d21' },
-  { name: 'CR2', color: 'eb6420' },
-  { name: 'CR3', color: 'fbca04' },
-  { name: 'CR4', color: '009800' },
-  { name: 'code review pending', color: 'eb6420' },
-  { name: 'code review complete', color: '009800' },
+  { name: 'priority:P1', color: 'e11d21' },
+  { name: 'priority:P2', color: 'eb6420' },
+  { name: 'priority:P3', color: 'fbca04' },
+  { name: 'priority:P4', color: '009800' },
+  { name: 'severity:S1', color: 'e11d21' },
+  { name: 'severity:S2', color: 'eb6420' },
+  { name: 'severity:S3', color: 'fbca04' },
+  { name: 'severity:S4', color: '009800' },
+  { name: 'code-review-level:CR1', color: 'e11d21' },
+  { name: 'code-review-level:CR2', color: 'eb6420' },
+  { name: 'code-review-level:CR3', color: 'fbca04' },
+  { name: 'code-review-level:CR4', color: '009800' },
+  { name: 'code-review-status:pending', color: 'eb6420' },
+  { name: 'code-review-status:complete', color: '009800' },
 ];
 
 const user = 'bufferapp';
