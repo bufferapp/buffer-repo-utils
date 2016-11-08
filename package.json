@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/bufferapp/buffer-repo-utils#readme",
   "dependencies": {
-    "github": "2.5.1"
+    "github": "6.0.2"
   }
 }

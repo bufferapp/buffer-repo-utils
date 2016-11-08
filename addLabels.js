@@ -33,13 +33,17 @@ if (!repo) {
   process.exit(1);
 }
 
-const basePayload = { user, repo };
+const basePayload = { owner: user, repo };
 const payloads = LABELS.map(label => Object.assign(label, basePayload));
 
 const createOrUpdateLabel = (payload) => {
   return github.issues.createLabel(payload)
     .then(result => `created ${payload.name}`)
-    .catch(err => github.issues.updateLabel(payload).then(result => `updated ${payload.name}`))
+    .catch(err => {
+      const updatePayload = Object.assign({ oldname: payload.name }, payload);
+      return github.issues.updateLabel(updatePayload)
+        .then(result => `updated ${payload.name}`);
+    })
 }
 
 const promsies = payloads.map((payload) => createOrUpdateLabel(payload));
